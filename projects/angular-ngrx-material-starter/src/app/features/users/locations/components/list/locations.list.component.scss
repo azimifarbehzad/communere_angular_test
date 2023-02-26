@@ -1,0 +1,45 @@
+.info-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+.info-header {
+  background-color: rgb(186, 247, 199);
+  color: green;
+  padding: 12px;
+}
+.info-details {
+  padding: 10px;
+}
+.info-btn {
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+  padding: 10px;
+}
+.close-btn {
+  border-radius: 5px;
+  border: 0;
+  padding: 6px;
+  color: white;
+  background-color: rgb(253, 190, 72);
+  cursor: pointer;
+}
+
+.save-btn {
+  border-radius: 5px;
+  padding: 6px;
+
+  border: 0;
+  color: white;
+  background-color: rgb(170, 212, 247);
+  cursor: pointer;
+}
+.btn-new {
+  position: relative;
+  bottom: 100px;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}

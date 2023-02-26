@@ -1,0 +1,66 @@
+@use '~@angular/material' as mat;
+
+@mixin anms-examples-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  anms-examples {
+    .nav-responsive {
+      border-bottom: 1px solid mat.get-color-from-palette($primary);
+
+      mat-select {
+        line-height: 48px;
+        margin: 0 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-responsive-overlay {
+    .active {
+      color: mat.get-color-from-palette($accent, default-contrast);
+      background-color: mat.get-color-from-palette($accent);
+    }
+  }
+}
+.dropdown .mat-form-field-flex {
+  display: inline-flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.mat-form-field-infix {
+  height: 45px;
+  padding: 0 !important;
+  width: 212px !important;
+  border-top: 0;
+}
+.mat-select-value {
+  // width: 212px !important;
+  text-align: center;
+  vertical-align: middle;
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+.mat-select-arrow-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #b3daf8;
+  color: white;
+  height: 44px;
+  /* width: 44px; */
+  padding: 0px 13px;
+}
+.gm-style .gm-style-iw-d{
+  overflow: hidden !important;
+}
+.gm-style .gm-style-iw-c{
+  padding: 0px !important;
+
+}
+.gm-ui-hover-effect {
+  opacity: 0;
+}

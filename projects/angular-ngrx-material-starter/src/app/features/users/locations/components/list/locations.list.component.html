@@ -1,0 +1,44 @@
+<div class="container" rtl>
+  <div class="row">
+    <div class="col-md-12">
+      <google-map height="600px" width="100%" [center]="center" [zoom]="zoom" (mapClick)="addMarker($event)">
+        <ng-container *ngFor="let location of locations$ | async">
+          <map-marker #marker="mapMarker" [position]="location.position" [options]="markerOptions"
+            (mapClick)="openInfoWindow(marker,infoWindow)"></map-marker>
+          <map-info-window #infoWindow="mapInfoWindow">
+            <div class="info-container">
+              <div class="info-header">
+                {{'anms.users.map.header' | translate}} </div>
+              <div class="info-details">
+                {{location.name}}
+              </div>
+              <div class="info-btn">
+                <button (click)="close(infoWindow)" draggable="false" aria-label="Close" title="Close"
+                  class="close-btn"> {{'anms.users.map.close' | translate}}
+                </button>
+                <button (click)="edit(location.id)" class="save-btn"> {{'anms.users.map.edit' | translate}}
+                </button>
+
+              </div>
+
+
+            </div>
+
+          </map-info-window>
+        </ng-container>
+
+
+
+      </google-map>
+      <div class="btn-wrapper">
+        <p *ngIf="(locations$ | async)?.length === 0">{{'anms.users.map.empty' | translate}}</p>
+        <button class="btn-new" type="button" mat-fab color="primary" [ngClass]="routeAnimationsElements"
+           (click)="addNew()">
+          {{'anms.users.map.new'| translate}}
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</div>

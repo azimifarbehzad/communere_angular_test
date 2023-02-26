@@ -1,0 +1,38 @@
+{
+  "anms.users.crud.add": "Add a new book",
+  "anms.users.crud.cancel": "Cancel",
+  "anms.users.crud.empty": "Looks like you don't have any books, let's add some!",
+  "anms.users.crud.error": "is required",
+  "anms.users.crud.new": "New",
+  "anms.users.crud.placeholder0": "Id",
+  "anms.users.crud.placeholder1": "Title",
+  "anms.users.crud.placeholder2": "Author",
+  "anms.users.crud.placeholder3": "Description",
+  "anms.users.crud.save": "Save",
+  "anms.users.crud.subtitle1": "Your books",
+  "anms.users.crud.subtitle2": "Book editor",
+  "anms.users.crud.text": "Books can be managed in this editor and are added, updated, deleted and selected through ",
+  "anms.users.crud.title": "CRUD books using @ngrx/entity & @ngrx/router-store",
+  "anms.users.crud.tooltip.delete": "Delete book",
+  "anms.users.crud.tooltip.deselect": "Deselect book",
+  "anms.users.crud.tooltip.edit": "Edit book",
+  "anms.users.title": "Examples",
+  "anms.users.location.name": "Location Name",
+  "anms.users.location.position": "Location On Map",
+  "anms.users.location.type": "Location Type",
+  "anms.users.location.logo": "Logo",
+  "anms.users.location.type.option1":"Bussines",
+  "anms.users.location.type.option2":"Bussines2",
+
+  "anms.users.location.type.option3":"Bussines3",
+  "anms.users.location.share": "Share Location",
+  "anms.users.map.edit":"Edit",
+  "anms.users.map.close":"Close",
+  "anms.users.map.header":"Location Details",
+  "anms.users.map.new":"New"
+
+
+
+
+
+}

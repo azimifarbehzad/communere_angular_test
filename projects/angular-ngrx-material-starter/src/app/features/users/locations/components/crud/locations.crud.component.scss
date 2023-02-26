@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: column;
+  border: 1px solid #0585ec;
+  border-radius: 5px;
+}
+.header {
+  background-color: #0585ec;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.col {
+  flex: 0 0 40%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.content {
+  padding: 10px 30px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.label {
+  flex: 0 0 45%;
+}
+.buttons {
+  text-align: right;
+  padding: 15px 0px;
+}
+.buttons button {
+  margin: 2px;
+}
+.save-btn {
+  background: #8dd8f9;
+  color: white;
+}
+.cancel-btn {
+  color: white;
+  background-color: grey;
+}
+input {
+  border: 1px solid gray;
+  padding: 11px;
+}
+.dropdown .mat-form-field-flex {
+  border-radius: 4px 4px 0 0;
+  /* padding: 0.75em 0.75em 0 0.75em; */
+  background: red !important;
+  border: 1px solid #534b4b !important;
+}
+.image-upload {
+  display: flex;
+}
+.image-upload > input {
+  // width: 55px;
+  position: absolute;
+  height: 75px;
+  opacity: 0;
+}
+.image-upload img {
+  // width: 80px;
+  cursor: pointer;
+}
+.align-start {
+  align-items: start;
+}
+.logo {
+  width: 40px;
+}
+@media only screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}

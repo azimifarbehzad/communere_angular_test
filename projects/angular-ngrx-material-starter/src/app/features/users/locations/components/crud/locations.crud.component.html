@@ -1,0 +1,77 @@
+<div class="container" rtl>
+  <div class="col">
+    <div class="form">
+      <div class="header">{{ 'anms.users.location.share' | translate }}</div>
+      <div class="content">
+        <form [formGroup]="locationFormGroup" [style.display]="" [ngClass]="routeAnimationsElements">
+          <div class="row">
+            <div class="label">{{ 'anms.users.location.name' | translate }}</div>
+            <div class="">
+              <input placeholder="{{ 'anms.users.location.name' | translate }}" formControlName="name" required
+                autofocus>
+
+            </div>
+          </div>
+          <div class="row align-start">
+            <div class="label">{{ 'anms.users.location.position' | translate }}</div>
+            <div class="">
+
+            </div>
+            <google-map height="150px" width="200px" [center]="center" [zoom]="zoom" (mapClick)="addMarker($event)">
+              <map-marker #marker [position]="currentLocation" [options]="markerOptions"></map-marker>
+            </google-map>
+          </div>
+          <div class="row">
+            <div class="label">{{ 'anms.users.location.type' | translate }}</div>
+            <div class="dropdown">
+              <mat-form-field>
+                <mat-select formControlName="type">
+                  <mat-option value="option1">{{ 'anms.users.location.type.option1' | translate }}</mat-option>
+                  <mat-option value="option2">{{ 'anms.users.location.type.option2' | translate }}</mat-option>
+                  <mat-option value="option3">{{ 'anms.users.location.type.option3' | translate }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">{{ 'anms.users.location.logo' | translate }}</div>
+            <div class="">
+              <img class="logo" src="{{locationFormGroup.get('logo')?.value}}" />
+              <div class="image-upload">
+                <label for="file-input">
+                  <img src="./assets/dropdown.png" />
+                </label>
+
+                <input type="file" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" />
+              </div>
+
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="">
+
+            </div>
+          </div>
+        </form>
+
+
+
+      </div>
+
+    </div>
+    <div class="buttons">
+      <button class="cancel-btn" (click)="cancelEditing()" mat-raised-button>
+        {{'anms.users.crud.cancel' | translate }}
+      </button>
+      <button class="save-btn" (click)="save()" mat-raised-button color="primary">
+        {{'anms.users.crud.save' | translate }}
+      </button>
+
+    </div>
+  </div>
+
+</div>
